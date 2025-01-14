@@ -187,7 +187,6 @@ NSObject <FlutterPluginRegistrar> *_fluwxRegistrar;
 }
 
 - (void)registerApp:(FlutterMethodCall *)call result:(FlutterResult)result {
-    return;
     NSNumber *doOnIOS = call.arguments[@"iOS"];
     
     if (![doOnIOS boolValue]) {
@@ -425,8 +424,11 @@ NSObject <FlutterPluginRegistrar> *_fluwxRegistrar;
     // ↓ previous solution -- according to document, this may fail if the WXApi hasn't registered yet.
     // return [WXApi handleOpenURL:url delegate:self];
     
+    NSLog(@" ==== 111 注册微信 [WXApi handleOpenURL:url delegate:self] ====")
+
     if (_isRunning) {
         // registered -- directly handle open url request by WXApi
+        NSLog(@" ==== 222 注册微信 [WXApi handleOpenURL:url delegate:self] ====")
         return [WXApi handleOpenURL:url delegate:self];
     } else {
         // unregistered -- cache open url request and handle it once WXApi is registered
