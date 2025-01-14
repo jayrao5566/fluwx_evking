@@ -187,6 +187,7 @@ NSObject <FlutterPluginRegistrar> *_fluwxRegistrar;
 }
 
 - (void)registerApp:(FlutterMethodCall *)call result:(FlutterResult)result {
+    return;
     NSNumber *doOnIOS = call.arguments[@"iOS"];
     
     if (![doOnIOS boolValue]) {
