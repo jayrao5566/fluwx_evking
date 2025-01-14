@@ -188,6 +188,10 @@ NSObject <FlutterPluginRegistrar> *_fluwxRegistrar;
 
 - (void)registerApp:(FlutterMethodCall *)call result:(FlutterResult)result {
     NSNumber *doOnIOS = call.arguments[@"iOS"];
+
+    NSLog(@"111 >>>> 你在注册微信 》》》》》");
+
+    print("222 >>>> 你在注册微信 》》》》》 ");
     
     if (![doOnIOS boolValue]) {
         result(@NO);
