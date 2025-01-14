@@ -35,7 +35,7 @@ CGFloat thumbnailWidth;
 
 NSUInteger defaultThumbnailSize = 32 * 1024;
 
-@interface FluwxPlugin()<WXApiDelegate,WechatAuthAPIDelegate>
+@interface FluwxPlugin()<WXApiDelegate,WechatAuthAPIDelegate, UIApplicationDelegate>
 
 @property (strong, nonatomic)NSString *extMsg;
 
