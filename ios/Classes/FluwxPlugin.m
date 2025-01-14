@@ -399,6 +399,12 @@ NSObject <FlutterPluginRegistrar> *_fluwxRegistrar;
     [FluwxDelegate defaultManager].extMsg = nil;
 }
 
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    NSLog(@" ==== 444 注册微信 [WXApi handleOpenURL:url delegate:self] ====");
+
+    return [WXApi handleOpenURL:url delegate:self];
+}
+
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     NSLog(@"=== 111 程序进入 applicationDidEnterBackground ===");
 }
