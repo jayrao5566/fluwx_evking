@@ -399,6 +399,13 @@ NSObject <FlutterPluginRegistrar> *_fluwxRegistrar;
     [FluwxDelegate defaultManager].extMsg = nil;
 }
 
+- (void)applicationDidEnterBackground:(UIApplication *)application {
+    NSLog(@"=== 111 程序进入 applicationDidEnterBackground ===");
+}
+
+- (void)applicationDidBecomeActive:(UIApplication *)application {
+    NSLog(@"=== 222 程序进入 applicationDidBecomeActive ===");
+}
 
 // Deprecated since iOS 9
 // See https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1623073-application?language=objc
