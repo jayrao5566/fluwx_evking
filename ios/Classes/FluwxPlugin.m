@@ -840,6 +840,7 @@ NSObject <FlutterPluginRegistrar> *_fluwxRegistrar;
 }
 
 - (void)onResp:(BaseResp *)resp {
+    NSLog(@" >>>>>> 结果is: payResp %@ >>>>>> ", resp);
     if ([resp isKindOfClass:[SendMessageToWXResp class]]) {
         SendMessageToWXResp *messageResp = (SendMessageToWXResp *) resp;
         NSDictionary *result = @{
