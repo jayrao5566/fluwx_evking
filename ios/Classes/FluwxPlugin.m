@@ -269,6 +269,7 @@ NSObject <FlutterPluginRegistrar> *_fluwxRegistrar;
 
 #ifndef NO_PAY
 - (void)handlePayment:(FlutterMethodCall *)call result:(FlutterResult)result {
+    NSLog(@" >>>>>> 请求参数is: payResp %@ >>>>>> ", call.arguments);
     NSNumber *timestamp = call.arguments[@"timeStamp"];
     
     NSString *partnerId = call.arguments[@"partnerId"];
