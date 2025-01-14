@@ -407,6 +407,13 @@ NSObject <FlutterPluginRegistrar> *_fluwxRegistrar;
     NSLog(@"=== 222 程序进入 applicationDidBecomeActive ===");
 }
 
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    NSLog(@" ==== 444 注册微信 [WXApi handleOpenURL:url delegate:self] ====");
+
+    return [WXApi handleOpenURL:url delegate:self];
+}
+
+
 // Deprecated since iOS 9
 // See https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1623073-application?language=objc
 // Use `application:openURL:options:` instead.
@@ -460,6 +467,7 @@ NSObject <FlutterPluginRegistrar> *_fluwxRegistrar;
 #ifndef SCENE_DELEGATE
 - (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void (^)(NSArray *_Nonnull))restorationHandler{
     // TODO: (if need) cache userActivity and handle it once WXApi is registered
+    NSLog(@" ==== 5555 注册微信 [WXApi handleOpenURL:url delegate:self] ====");
     return [WXApi handleOpenUniversalLink:userActivity delegate:self];
 }
 #endif
