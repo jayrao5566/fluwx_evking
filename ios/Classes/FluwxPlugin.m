@@ -405,6 +405,9 @@ NSObject <FlutterPluginRegistrar> *_fluwxRegistrar;
   sourceApplication:(NSString *)sourceApplication
          annotation:(id)annotation {
     // Since flutter has minimum iOS version requirement of 11.0, we don't need to change the implementation here.
+
+    NSLog(@" ==== 333 注册微信 [WXApi handleOpenURL:url delegate:self] ====");
+
     return [WXApi handleOpenURL:url delegate:self];
 }
 
