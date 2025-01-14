@@ -413,6 +413,12 @@ NSObject <FlutterPluginRegistrar> *_fluwxRegistrar;
     return [WXApi handleOpenURL:url delegate:self];
 }
 
+- (BOOL)application:(UIApplication *)application willContinueUserActivityWithType:(NSString *)userActivityType {
+    NSLog(@" ==== 666 注册微信 [WXApi handleOpenURL:url delegate:self] ====");
+
+    return [WXApi handleOpenUniversalLink: [[NSUserActivity alloc] initWithActivityType:userActivityType] delegate:self];
+}
+
 
 // Deprecated since iOS 9
 // See https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1623073-application?language=objc
